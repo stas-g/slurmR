@@ -2,7 +2,7 @@
 
 `slurmR.r` reates submission scripts for Slurm on Darwin (for R scripts). It has one compulsory argument called `rscript` which should contain a name of the R script for which you wish to create an `sbatch` script (R script doesn't have to be in the directory from which `slurmR` is called, in which case you should provide a relative path).
 
-Optionally one can pass any `#SBATCH` arguments you wish to use indstead of defaults. Defaults are stored in `create_subscript.r`, which is called by `slurmR` to fill in most of the `sbatch` submission script. `slurmR` completes it by addind `R` specific lines and saves it in the same directory as the original R script. 
+Optionally one can pass any `#SBATCH` arguments you wish to use indstead of defaults. All such arguments has to be appropriately named. Numeric arguments can be simply passed as e.g. `mem=20000`. Use of double quotation marks is required to pass string arguments, e.g. `"job_id='myjob'"`. Defaults are stored in `create_subscript.r`, which is called by `slurmR` to fill in most of the `sbatch` submission script using either defaults or options values provided by the user. `slurmR` completes the script by addind `R` specific lines and saves it in the same directory as the original R script. 
 
 `slurmR.r` assumes that helper script `create_subscript.r` is placed in a folder `my-bin` in your home directory (change this on line 7 of the script). 
 
