@@ -1,4 +1,4 @@
-# slurmR
+#slurmR
 
 `slurmR.r` reates submission scripts for Slurm on Darwin (for R scripts). It has one compulsory argument called `rscript` which should contain a name of the R script for which you wish to create an `sbatch` script (R script doesn't have to be in the directory from which `slurmR` is called, in which case you should provide a relative path).
 
@@ -10,8 +10,10 @@ Make executable from anywhere by including `export PATH="path-to-slurmR.r:$PATH"
 
 Examples of use:
 
-#creates `myScript-todaysdate.sh`
+creates `myScript-todaysdate.sh` in current directory:
+
 `slurmeR.r "rscript='myRscript.R'"`
 
-#creates `myscript-todaysdate.sh` with default parameters `ntasks` and `time` overriden in directory Documents
+creates `myscript-todaysdate.sh` with default parameters `ntasks` and `time` overriden in directory Documents:
+
 `slurmeR.r "rscript='Documents/myRscript.R'"` ntasks=10 "ttime='02:00:00'"
