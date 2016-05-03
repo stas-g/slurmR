@@ -16,4 +16,4 @@ creates `myScript-todaysdate.sh` in current directory:
 
 creates `myscript-todaysdate.sh` with default parameters `ntasks` and `time` overriden in directory Documents:
 
-`slurmeR.r "rscript='Documents/myRscript.R'"` ntasks=10 "ttime='02:00:00'"
+`slurmeR.r "rscript='Documents/myRscript.R'" ntasks=10 "ttime='02:00:00'"`
