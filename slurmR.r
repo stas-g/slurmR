@@ -10,7 +10,7 @@ args <- commandArgs(trailingOnly = TRUE)
 # if any arguments named as the #SBATCH options are passed defaults values for those are overwritten
 for(i in 1 : length(args)) eval(parse(text = args[i]))
 # account argument accepts a numeric input (3) or a full account name
-if(account == 4) account <- "CWALLACE-SL4"
+if(account %in% c(2 : 4)) account <- paste0("CWALLACE-SL", account)
 
 
 # if R script in not in the directory from which slurmer is called, parse the path
