@@ -2,7 +2,7 @@
 
 #default #SBATCH settings
 job_id <- "myRjob"
-account <- "CWALLACE-SL2"
+account <- "CWALLACE-SL3"
 nodes <- 1
 ntasks <- 1
 ttime <- "01:00:00"
