@@ -2,7 +2,7 @@
 
 `slurmR` creates submission scripts for Slurm on Darwin (for R scripts). It has one compulsory argument called `rscript` which should contain a name of the R script for which you wish to create a submission `sbatch` script.
 
-Optionally one can pass any `#SBATCH` arguments you wish to use indstead of defaults. All such arguments has to be appropriately named: you can find (and change) default settings and arguments' names in `create_subscript.r`. Numeric arguments can be simply passed as e.g. `mem=20000`. Use of double quotation marks is required to pass string arguments, e.g. `"job_id='myjob'"`. 
+Optionally one can pass any `#SBATCH` arguments you wish to use indstead of defaults. All such arguments has to be appropriately named: you can find (and change) default settings and arguments' names in `create_subscript.r`. Numeric arguments can be simply passed as e.g. `mem=20000`. Use of double quotation marks is required to pass string arguments, e.g. `"job_id='myjob'"`. Additionally you can switch between different `SL` accounts by simply passing e.g. `account=2` (instead of `"account='CWALLACE-SL2'"`).
 
 *set-up:*
 
