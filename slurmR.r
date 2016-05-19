@@ -29,9 +29,9 @@ if(grepl("/", rscript)){
 }
 
 # logfile name
-logname <- paste0(sname, "-", format(Sys.Date(), format = "%m%d%y"), ".log")
+logname <- paste0(sname, "-", format(Sys.Date(), format = "%d%m%y"), ".log")
 # name of the sbatch script (should be date + name of the R script (not the path!) + .sh)
-sname <- paste0(sname, "-", format(Sys.Date(), format = "%m%d%y"), ".sh")
+sname <- paste0(sname, "-", format(Sys.Date(), format = "%d%m%y"), ".sh")
 # path to where it should be saved (same directory as the original R script)
 new_path <- paste0(path, sname)
 
